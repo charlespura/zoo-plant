@@ -6,9 +6,9 @@
 <img width="500" height="300" alt="Screenshot 2026-08-02 at 10 38 57 PM" src="https://github.com/user-attachments/assets/5da45597-e249-4beb-b4c7-536952faf694" />
 <img width="500" height="300" alt="Screenshot 2026-08-02 at 10 42 59 PM" src="https://github.com/user-attachments/assets/a3e1c478-f915-4d21-889f-1f2bccec2dcd" />
 
-! ZooPlant is a web-based educational platform that allows users to explore information about plants and animals through an interactive and visually appealing interface. The system includes user authentication, category browsing, search functionality, personalized recommendations, quizzes, and an administrative panel for managing content.
+ ZooPlant is a web-based educational platform that allows users to explore information about plants and animals through an interactive and visually appealing interface. The system includes user authentication, category browsing, search functionality, personalized recommendations, quizzes, and an administrative panel for managing content.
 
-! Note: This project was originally developed approximately two years before its public release on GitHub. It is being uploaded now as part of my portfolio and project archive.
+ Note: This project was originally developed approximately two years before its public release on GitHub. It is being uploaded now as part of my portfolio and project archive.
 
 ## Features
 
