@@ -1,0 +1,54 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Composer dependencies
+/vendor/
+
+# Composer PHAR
+composer.phar
+
+# Logs
+*.log
+logs/
+
+# Cache files
+cache/
+tmp/
+temp/
+
+# Session files
+*.session
+sessions/
+
+# Database files (if generated locally)
+*.sqlite
+*.db
+
+# Uploads (optional - remove if you want uploads tracked)
+uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PHPUnit
+.phpunit.result.cache
+
+# Node modules (if you later add npm)
+node_modules/
+
+# Coverage reports
+coverage/
+.clover.xml
+
+# Misc
+*.bak
+*.tmp

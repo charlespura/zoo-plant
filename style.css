@@ -1,0 +1,426 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    
+}
+body {
+    background: url('https://img.freepik.com/premium-photo/digital-illustration-animals-plants_662214-70248.jpg?w=1480') no-repeat center center fixed;
+    background-size: cover; /* Ensure the image covers the entire body */
+    color: white; /* White text for better contrast on the background */
+}
+
+/* Centering and styling the content div */
+#content {
+    text-align: center;
+    margin-top: 4rem;
+}#typing-text {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #333; /* Text color */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #333; /* Cursor effect */
+    width: 0; /* Hidden initially */
+    animation: typing 4s steps(30, end) 1, blink 0.5s step-end 1s infinite alternate;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blinking effect */
+@keyframes blink {
+    0% {
+        border-right-color: transparent;
+    }
+    100% {
+        border-right-color: #333;
+    }
+}
+
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+#content .card {
+    margin-bottom: 1rem;
+}
+
+/* Animation for fade-in and slide when selecting 'plant' */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container for content with animation */
+.animate-content {
+    animation: fadeSlideIn 0.5s ease-in-out;
+}
+.card-body {
+    background-size: cover;
+    background-position: center center;
+    text-align: left; /* Align content to the left */
+  
+}
+
+/* Initial card body styling */
+.card-body {
+    position: relative; /* Allow for pseudo-element overlay */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Smooth transition for scaling, shadow, and background color */
+    background-color: rgba(255, 252, 252, 0.7); /* Light transparent background (adjust transparency as needed) */
+    padding: 1rem; /* Add padding */
+    color: #fffafa; /* Dark text color for better contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Stronger shadow to make text stand out more */
+    
+}
+
+/* Darker overlay for better contrast on green/white background */
+.card-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(241, 234, 234, 0.3); /* Darker overlay to improve text visibility */
+    z-index: -1; /* Place the overlay behind the text */
+}
+
+/* Hover effect for card body */
+.card-body:hover {
+    transform: scale(1.02); /* Slightly enlarge the card body */
+    box-shadow: 0 2px 6px rgba(247, 242, 242, 0.1); /* Softer shadow for the body */
+    background-color: rgba(255, 251, 251, 0.85); /* Slightly less transparent background on hover */
+}
+
+/* Enhance paragraph text visibility */
+.card-body p {
+    color: #ffffff; /* Make paragraph text dark for contrast */
+    font-size: 1rem; /* Adjust font size as needed */
+    
+    line-height: 1.6; /* Better readability */
+    text-shadow: 1px 1px 3px rgba(6, 5, 5, 0.2); /* Add subtle shadow to paragraphs */
+}
+
+/* Card Title styling */
+.card-title {
+    font-family: 'Arial', sans-serif; /* Use any preferred font */
+    font-weight: bold; /* Make the text bold */
+    font-size: 1.5rem; /* Increase font size */
+    color: #fffdfd; /* Ensure the title text is dark */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Stronger shadow for better visibility */
+}
+
+/* Optional: Hover effect for card-title */
+.card-title:hover {
+    color: #dfeded; /* Change text color on hover */
+    cursor: pointer; /* Indicate clickable text */
+}
+
+/* Hover animation for buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
+    background-color: #218838; /* Change background color */
+}
+
+/* Animation for when a plant is clicked */
+.container.mt-4.animate-plant {
+    animation: fadeSlideIn 1s ease-out;
+}
+/* CSS Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation for sliding effect */
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Add animation to content when it appears */
+.content-animated {
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in effect */
+}
+
+/* Optional: Slide-in effect */
+.content-slide-animated {
+    animation: slideIn 0.7s ease-out; /* Slide-in effect */
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: translateY(-5px); /* Float effect */
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Optional: Add a border effect on hover */
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #ffcc00; /* Optional border effect */
+}/* Style for the recommendation items */
+.recommendation-item {
+    display: inline-block;
+    background: linear-gradient(to right, #0a55a6 50%, #183db7 50%); /* Blue on the left and Green on the right */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    margin: 5px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for readability */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Hover effect for the button */
+.recommendation-item:hover {
+    background: linear-gradient(to right, #0f4e15 50%, #0eac30 50%); /* Darker blue on the left and darker green on the right */
+    transform: translateY(-3px); /* Slight floating effect */
+}
+
+/* Optional: Add a focus effect for accessibility */
+.recommendation-item:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.6); /* Blue shadow for focus */
+}
+
+/* General Styling for Content Section */
+#content {
+    font-family: 'Roboto', sans-serif; /* Modern, readable font */
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Typing text */
+#typing-text {
+    font-size: 18px;
+    color: #333; /* Dark color for the text */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300; /* Lighter weight for a soft effect */
+}
+
+/* Section Styling for Plants and Animals */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Title for Sections */
+.section-title {
+    font-size: 24px;
+    color: #4CAF50; /* Green for Plants section */
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: 600; /* Bold title for emphasis */
+    text-transform: capitalize; /* Capitalize titles for better readability */
+}
+
+/* Description Text */
+.section-description {
+    font-size: 16px;
+    color: #555; /* Dark gray color for description */
+    line-height: 1.6; /* Make the text more readable with proper line spacing */
+    margin-bottom: 15px;
+}
+
+/* Optional: Hover effect for section titles */
+.section-title:hover {
+    color: #388E3C; /* Darker green on hover */
+    cursor: pointer; /* Pointer to indicate interactivity */
+}
+  /* Display dropdown on hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+:root {
+    --primary-green: #2d6a4f;
+    --secondary-green: #40916c;
+    --light-green: #95d5b2;
+    --accent: #ffb703;
+    --dark-bg: #1a3a2a;
+    --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--dark-bg);
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-green);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.text-accent {
+    color: var(--accent);
+}
+
+.bg-green-gradient {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+}
+
+.bg-animal-gradient {
+    background: linear-gradient(135deg, #e76f51, #f4a261);
+}
+
+.shadow-glow {
+    box-shadow: 0 0 30px rgba(255, 183, 3, 0.1);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .content-card .media-container {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .content-card .media-container iframe,
+    .content-card .media-container img {
+        height: 200px !important;
+    }
+    
+    .category-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-category {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .navbar-custom,
+    #sidebar,
+    .category-buttons,
+    #recommendations,
+    #pagination,
+    .btn-search,
+    #voice-search-btn,
+    .sidebar-toggle {
+        display: none !important;
+    }
+    
+    .content-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: white !important;
+        color: black !important;
+    }
+    
+    .content-card .card-title {
+        color: var(--primary-green) !important;
+    }
+}
